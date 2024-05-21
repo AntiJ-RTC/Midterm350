@@ -1,0 +1,11 @@
+﻿<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle text-white" role="button" data-bs-toggle="dropdown">Meet our Vets!</a>
+    <ul class="dropdown-menu">
+        <li> <a asp-controller="Vet" asp-action="Index" class="text-decoration-none text-reset">View All Vets</a> </li>
+        <br />
+        @foreach(var vet in Model)
+        {
+            <li> <a asp-controller="Vet" asp-action="Details" asp-route-id="@vet.Id" class="text-decoration-none text-reset">@vet.Name</a> </li>
+        }
+    </ul>
+</li>

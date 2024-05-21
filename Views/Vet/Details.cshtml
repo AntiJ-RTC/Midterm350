@@ -1,0 +1,17 @@
+﻿@model Midterm350.Models.Veterinarian
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Vet Details</h1>
+
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="@Model.ImgURL" alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Name, @Model.YearsExperience years of experience</h5>
+        <p class="card-text">@Model.Bio</p>
+        <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Edit</a>
+        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    </div>
+</div>

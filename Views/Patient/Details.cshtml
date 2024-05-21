@@ -1,0 +1,25 @@
+﻿@model Midterm350.Models.Patient
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details of Patient</h1>
+
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src=@Model.ImgURL alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Name, Age @Model.Age</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Species: @Model.Species</li>
+        <li class="list-group-item">Breed: @Model.Breed</li>
+        <li class="list-group-item">Medication: @Model.Medications</li>
+        <li class="list-group-item">Medical History: @Model.MedicalHistory</li>
+
+    </ul>
+    <div class="card-body">
+        <a asp-action="Edit" asp-route-id="@Model?.Id" class="card-link">Edit</a>
+        <a asp-action="Index" class="card-link">Back to List</a>
+    </div>
+</div>
